@@ -1,0 +1,25 @@
+[build-system]
+requires = ['setuptools>=61.0']
+build-backend = 'setuptools.build_meta'
+
+[tool.poetry]
+name = 'cat_attack'
+version = '0.0.1'
+description = 'A Python library that finds all .xlsx files within a specified folder and adds an "Important" sheet with a random cat picture.'
+authors = ["Michalina Krzosek <michalina.krzosek@gmail.com>"]
+readme = 'README.md'
+
+[tool.poetry.scripts]
+cat_attack = 'cat_attack.attack:cat_attack_command'
+cat_breeds = 'cat_attack.breed_dictionary:show_breeds'
+update_breeds = 'cat_attack.breed_dictionary:update_breed_dict'
+
+[tool.poetry.dependencies]
+python = '^3.8'
+click = '8.1.7'
+openpyxl = '3.1.2'
+Requests = '2.31.0'
+urllib3 = '2.1.0'
+
+[tool.poetry.dev-dependencies]
+Pillow = '10.2.0'
